@@ -1,0 +1,107 @@
+/* Reset básico para garantir consistência em todos os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilização do corpo e da página */
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f4f8;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Animação de entrada suave */
+body {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Container centralizado com design sofisticado */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), 
+                -15px -15px 30px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px) saturate(180%);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 90%;
+    width: 450px;
+    overflow: hidden;
+}
+
+/* Efeito hover com movimento e sombra dinâmica */
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.15), 
+                -20px -20px 40px rgba(255, 255, 255, 0.6);
+}
+
+/* Estilo do título com ênfase em acessibilidade */
+h1 {
+    font-size: 3em;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Linha decorativa sob o título */
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Botão de ação interativo */
+button {
+    padding: 15px 35px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+/* Efeito hover no botão */
+button:hover {
+    background: linear-gradient(145deg, #2575fc, #6a11cb);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
